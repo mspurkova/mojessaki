@@ -1,0 +1,126 @@
+h1{
+    color: rgb(60, 58, 196);
+    font-family: "Times New Roman", Times, serif;
+    font-size: 36px;
+    text-align: center;
+    margin-left: 0%;
+    }
+    
+    .formularz {
+    
+        background-position: center center;
+        text-align: center;
+        color: rgb(83, 51, 199)
+        
+    
+    
+    }
+    
+    input {
+        width: 50%;
+        height: 15px;
+        padding: 12px 20px;
+        box-sizing:border-box;
+        border: 2px solid rgb(59, 33, 150);
+        border-radius: 16px;
+        background-color: #e5a8ca;
+        resize:both;
+      font-family:Arial, Helvetica, sans-serif;
+      font-size: 15px;
+    
+    }
+    
+    
+    textarea {
+    
+        width: 50%;
+      height: 150px;
+      padding: 12px 20px;
+      box-sizing:border-box;
+      border: 2px solid rgb(59, 33, 150);
+      border-radius: 10px;
+      background-color: #e5a8ca;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    
+    }
+    
+    input[value] {
+        width: 10%;
+        margin: 20px;
+        height: 40px;
+        background-color: rgb(60, 58, 196);
+        color: rgb(242, 240, 248);
+        border-radius: 10px;
+        
+        cursor: pointer;
+        padding: 15px 40px;
+      
+        font-size: 15px;
+        font-weight: bolder;
+        text-align: center;
+        
+
+      }  
+
+      #footer {
+        text-align: center;
+        justify-content: center;
+      
+        color: rgb(247, 251, 253);
+        font-size: 15px;
+        bottom: 0;
+        width: 100%;
+        height: 2rem;           
+        display: flex;
+     
+        padding: 1px;
+        background-color: rgb(60, 58, 196);
+        align-items: center;
+        font-weight: bolder;
+    
+    
+      }
+    
+
+      .breadcrumb {
+        // scss-docs-start breadcrumb-css-vars
+        --#{$prefix}breadcrumb-padding-x: #{$breadcrumb-padding-x};
+        --#{$prefix}breadcrumb-padding-y: #{$breadcrumb-padding-y};
+        --#{$prefix}breadcrumb-margin-bottom: #{$breadcrumb-margin-bottom};
+        @include rfs($breadcrumb-font-size, --#{$prefix}breadcrumb-font-size);
+        --#{$prefix}breadcrumb-bg: #{$breadcrumb-bg};
+        --#{$prefix}breadcrumb-border-radius: #{$breadcrumb-border-radius};
+        --#{$prefix}breadcrumb-divider-color: #{$breadcrumb-divider-color};
+        --#{$prefix}breadcrumb-item-padding-x: #{$breadcrumb-item-padding-x};
+        --#{$prefix}breadcrumb-item-active-color: #{$breadcrumb-active-color};
+        // scss-docs-end breadcrumb-css-vars
+      
+        display: flex;
+        flex-wrap: wrap;
+        padding: var(--#{$prefix}breadcrumb-padding-y) var(--#{$prefix}breadcrumb-padding-x);
+        margin-bottom: var(--#{$prefix}breadcrumb-margin-bottom);
+        @include font-size(var(--#{$prefix}breadcrumb-font-size));
+        list-style: none;
+        background-color: var(--#{$prefix}breadcrumb-bg);
+        @include border-radius(var(--#{$prefix}breadcrumb-border-radius));
+      }
+      
+      .breadcrumb-item {
+        // The separator between breadcrumbs (by default, a forward-slash: "/")
+        + .breadcrumb-item {
+          padding-left: var(--#{$prefix}breadcrumb-item-padding-x);
+      
+          &::before {
+            float: left; // Suppress inline spacings and underlining of the separator
+            padding-right: var(--#{$prefix}breadcrumb-item-padding-x);
+            color: var(--#{$prefix}breadcrumb-divider-color);
+            content: var(--#{$prefix}breadcrumb-divider, escape-svg($breadcrumb-divider)) #{"/* rtl:"} var(--#{$prefix}breadcrumb-divider, escape-svg($breadcrumb-divider-flipped)) #{"*/"};
+          }
+        }
+      
+        &.active {
+          color: var(--#{$prefix}breadcrumb-item-active-color);
+        }
+      }
+      
