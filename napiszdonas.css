@@ -17,19 +17,23 @@ h1{
     }
     
     input {
-        width: 50%;
+        width: 20%;
         height: 15px;
         padding: 12px 20px;
         box-sizing:border-box;
         border: 2px solid rgb(59, 33, 150);
         border-radius: 16px;
-        background-color: #e5a8ca;
+        
         resize:both;
       font-family:Arial, Helvetica, sans-serif;
       font-size: 15px;
     
     }
     
+    input:focus {  
+      background-color:  #e5a8ca;
+      outline: none;  
+      } 
     
     textarea {
     
@@ -39,29 +43,33 @@ h1{
       box-sizing:border-box;
       border: 2px solid rgb(59, 33, 150);
       border-radius: 10px;
-      background-color: #e5a8ca;
+
     font-family:Arial, Helvetica, sans-serif;
     font-size: 15px;
     
     }
-    
-    input[value] {
-        width: 10%;
-        margin: 20px;
-        height: 40px;
-        background-color: rgb(60, 58, 196);
-        color: rgb(242, 240, 248);
-        border-radius: 10px;
-        
-        cursor: pointer;
-        padding: 15px 40px;
-      
-        font-size: 15px;
-        font-weight: bolder;
-        text-align: center;
-        
+    input[type=textarea]:focus {   
+      background-color:  #e5a8ca;
+      outline: none;  
+      } 
 
-      }  
+    input[value] {
+      width: 10%;
+      margin: 20px 0;
+      height: 40px;
+      background-color: rgb(60, 58, 196);
+      color: rgb(242, 240, 248);
+      border-radius: 10px;
+      
+      cursor: pointer;
+      padding: 16px 20px;
+    
+      font-size: 15px;
+      font-weight: bolder;
+      text-align: center;
+      border: none; 
+        } 
+
 
       #footer {
         text-align: center;
@@ -82,45 +90,3 @@ h1{
     
       }
     
-
-      .breadcrumb {
-        // scss-docs-start breadcrumb-css-vars
-        --#{$prefix}breadcrumb-padding-x: #{$breadcrumb-padding-x};
-        --#{$prefix}breadcrumb-padding-y: #{$breadcrumb-padding-y};
-        --#{$prefix}breadcrumb-margin-bottom: #{$breadcrumb-margin-bottom};
-        @include rfs($breadcrumb-font-size, --#{$prefix}breadcrumb-font-size);
-        --#{$prefix}breadcrumb-bg: #{$breadcrumb-bg};
-        --#{$prefix}breadcrumb-border-radius: #{$breadcrumb-border-radius};
-        --#{$prefix}breadcrumb-divider-color: #{$breadcrumb-divider-color};
-        --#{$prefix}breadcrumb-item-padding-x: #{$breadcrumb-item-padding-x};
-        --#{$prefix}breadcrumb-item-active-color: #{$breadcrumb-active-color};
-        // scss-docs-end breadcrumb-css-vars
-      
-        display: flex;
-        flex-wrap: wrap;
-        padding: var(--#{$prefix}breadcrumb-padding-y) var(--#{$prefix}breadcrumb-padding-x);
-        margin-bottom: var(--#{$prefix}breadcrumb-margin-bottom);
-        @include font-size(var(--#{$prefix}breadcrumb-font-size));
-        list-style: none;
-        background-color: var(--#{$prefix}breadcrumb-bg);
-        @include border-radius(var(--#{$prefix}breadcrumb-border-radius));
-      }
-      
-      .breadcrumb-item {
-        // The separator between breadcrumbs (by default, a forward-slash: "/")
-        + .breadcrumb-item {
-          padding-left: var(--#{$prefix}breadcrumb-item-padding-x);
-      
-          &::before {
-            float: left; // Suppress inline spacings and underlining of the separator
-            padding-right: var(--#{$prefix}breadcrumb-item-padding-x);
-            color: var(--#{$prefix}breadcrumb-divider-color);
-            content: var(--#{$prefix}breadcrumb-divider, escape-svg($breadcrumb-divider)) #{"/* rtl:"} var(--#{$prefix}breadcrumb-divider, escape-svg($breadcrumb-divider-flipped)) #{"*/"};
-          }
-        }
-      
-        &.active {
-          color: var(--#{$prefix}breadcrumb-item-active-color);
-        }
-      }
-      
